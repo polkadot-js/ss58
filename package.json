@@ -1,6 +1,6 @@
 {
   "name": "ss58",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Substrate base-58 checksum address codec",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "ss58"
   ],
   "author": "Parity Technologies <admin@parity.io>",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/polkadot-js/ss58/issues"
   },

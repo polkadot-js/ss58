@@ -1,7 +1,7 @@
-import {blake2b} from 'blakejs'
-import bs58 from 'bs58'
+const {blake2b} = require('blakejs')
+const bs58 = require('bs58')
 
-export function ss58_decode(address) {
+function ss58_decode(address) {
 	let a
 	try {
 		a = bs58.decode(address)
@@ -29,7 +29,7 @@ export function ss58_decode(address) {
 	}
 }
 
-export function ss58_encode(address) {
+function ss58_encode(address) {
 	if (address.length != 32) {
 		return null
 	}
@@ -38,3 +38,5 @@ export function ss58_encode(address) {
 	let complete = new Uint8Array([...bytes, hash[0], hash[1]])
 	return bs58.encode(complete)
 }
+
+module.exports = { ss58_decode, ss58_encode }
